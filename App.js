@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
 import Hello from './hello';
-import './App.css';
+import React from 'react';
+import Wrapper from './Wrapper';
 
 function App() {
-  const name = 'react';
-  const style = {
-    backgroundColor:'black',
-    color : 'aqua',
-    fontSize:24,
-    padding: '1rem'
-  }
   return (
-    <div>
-      <Hello />
-      <Hello />
-      <div style={style} >{name}</div>
-      <div className='gray-box'>{name}</div>
-    </div>
+    <Wrapper>
+    <Hello name="react" color='red' />
+    <Hello color='pink' /> {/* this is the children in Wrapper tag*/}
+    </Wrapper>
   );
 }
+
 
 export default App;
